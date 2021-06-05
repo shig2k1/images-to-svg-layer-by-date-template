@@ -1,0 +1,7 @@
+enum GAME_STATE {
+  WAITING_FOR_PLAYERS,
+  IN_PROGRESS,
+  GAME_OVER
+}
+
+export default GAME_STATE
