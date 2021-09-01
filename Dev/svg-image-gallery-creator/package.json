@@ -1,0 +1,14 @@
+{
+  "name": "svg-image-gallery-creator",
+  "version": "1.0.0",
+  "description": "A program to convert a directory of layered images into a dynamic SVG file",
+  "main": "image-to-svg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sh!g",
+  "license": "ISC",
+  "dependencies": {
+    "image-to-base64": "^2.2.0"
+  }
+}
