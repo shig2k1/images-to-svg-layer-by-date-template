@@ -13,22 +13,24 @@ const SVG_TEMPLATE = `<?xml version="1.0" encoding="utf-8"?>
 
       // hide all the layers
       for (let i=1; i<=31; i++) {
-          document.getElementById('_' + i).style.display = 'none'
+          document.getElementById(i).style.display = 'none'
       }
 
       // get the number of todays date - so if it's the 2nd of april, that'd be 2
       let date = new Date().getDate()
 
       // make the right layer visible
-      document.getElementById('_' + date).style.display = 'block'
-      console.log('hello!')
+      document.getElementById(date).style.display = 'block'
     ]]>
   </script>
+  <style>
+	  image#BG { display: block; }
+  </style>
   </svg>
 `
 
 const BG = `<image id="BG" style="overflow:visible;enable-background:new    ;" width="1000" height="1000" href="data:image/png;base64,/*HREF*/" />`
-const IMG = `<image style="overflow:visible;enable-background:new    ;" width="1000" height="883" id="/*ID*/" href="data:image/png;base64,/*HREF*/" />`
+const IMG = `<image style="display:none; overflow:visible;enable-background:new    ;" width="1000" height="883" id="/*ID*/" href="data:image/png;base64,/*HREF*/" />`
 
 async function readDirAndConvert () {
   const dir = path.resolve(__dirname, 'example-images')
